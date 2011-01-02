@@ -1,0 +1,10 @@
+Controls the rate of outgoing messages
+
+This modules implements a simple rate-limiting strategy for outgoing
+IRC messages. It is used by connections to determine whether they can
+continue to send messages or if they should delay that operation
+instead.
+
+This module only needs to be active on connections that must be
+throttled and provides two options to decide how many messages may
+be sent to a connection per time period.
