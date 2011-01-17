@@ -45,8 +45,7 @@ extends ErebotModuleTestCase
 
     public function testLimit()
     {
-        // Make it look as though the channel
-        // uses "password" as its key.
+        // No more than 2 messages every 2 seconds.
         $this->_serverConfig
             ->expects($this->any())
             ->method('parseInt')
@@ -68,6 +67,32 @@ extends ErebotModuleTestCase
 
         // Again with the 2 messages every 2 seconds limit.
         $this->assertFalse($this->_module->canSend());
+    }
+
+    /**
+     * @expectedException Erebot_InvalidValueException
+     */
+    public function testInvalidLimit()
+    {
+        // Set an invalid limit.
+        $this->_serverConfig
+            ->expects($this->any())
+            ->method('parseInt')
+            ->will($this->onConsecutiveCalls(0, 1));
+        $this->_module->canSend();
+    }
+
+    /**
+     * @expectedException Erebot_InvalidValueException
+     */
+    public function testInvalidPeriod()
+    {
+        // Set an invalid period.
+        $this->_serverConfig
+            ->expects($this->any())
+            ->method('parseInt')
+            ->will($this->onConsecutiveCalls(1, 0));
+        $this->_module->canSend();
     }
 }
 
