@@ -39,8 +39,9 @@ implements  Erebot_Interface_RateLimiter
         $period = $this->parseInt('period');
 
         if ($limit < 1 || $period < 1) {
-            /// @TODO: warn about an invalid config
-            return TRUE;
+            throw new Erebot_InvalidValueException(
+                'Invalid limit or time period'
+            );
         }
 
         // Mark obsolete entries as such.
