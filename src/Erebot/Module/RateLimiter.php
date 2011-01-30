@@ -22,7 +22,7 @@ implements  Erebot_Interface_RateLimiter
 {
     protected $_queue;
 
-    public function reload($flags)
+    public function _reload($flags)
     {
         if ($this->_channel !== NULL)
             return;
@@ -30,6 +30,10 @@ implements  Erebot_Interface_RateLimiter
         if ($flags & self::RELOAD_MEMBERS) {
             $this->_queue = array();
         }
+    }
+
+    protected function _unload()
+    {
     }
 
     public function canSend()
