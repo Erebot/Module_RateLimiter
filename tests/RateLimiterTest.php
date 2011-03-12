@@ -39,7 +39,7 @@ extends ErebotModuleTestCase
 
     public function tearDown()
     {
-        unset($this->_module);
+        $this->_module->unload();
         parent::tearDown();
     }
 
@@ -59,13 +59,15 @@ extends ErebotModuleTestCase
         // The 3rd message must be rejected.
         $this->assertFalse($this->_module->canSend());
 
-        sleep(2);
+        // Wait 2.5 seconds so that all messages
+        // are considered sent.
+        usleep(2500000);
 
         // After we wait for long enough, new messages can be sent.
         $this->assertTrue($this->_module->canSend());
         $this->assertTrue($this->_module->canSend());
 
-        // Again with the 2 messages every 2 seconds limit.
+        // Again with the limit.
         $this->assertFalse($this->_module->canSend());
     }
 
