@@ -29,12 +29,12 @@ extends ErebotModuleTestCase
     {
         parent::setUp();
 
-        $this->_module = new Erebot_Module_RateLimiter(
+        $this->_module = new Erebot_Module_RateLimiter(NULL);
+        $this->_module->reload(
             $this->_connection,
-            NULL
+            Erebot_Module_Base::RELOAD_ALL |
+            Erebot_Module_Base::RELOAD_INIT
         );
-        $this->_module->reload( Erebot_Module_Base::RELOAD_ALL |
-                                Erebot_Module_Base::RELOAD_INIT);
     }
 
     public function tearDown()
