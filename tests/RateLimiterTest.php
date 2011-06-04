@@ -59,9 +59,9 @@ extends ErebotModuleTestCase
         // The 3rd message must be rejected.
         $this->assertFalse($this->_module->canSend());
 
-        // Wait 2.5 seconds so that all messages
+        // Wait 3.5 seconds so that all messages
         // are considered sent.
-        usleep(2500000);
+        usleep(3500000);
 
         // After we wait for long enough, new messages can be sent.
         $this->assertTrue($this->_module->canSend());
