@@ -16,12 +16,33 @@
     along with Erebot.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+/**
+ * \brief
+ *      A module that can limit the rate of messages
+ *      sent to the IRC server.
+ *
+ * This module implements a simple rate-limiting strategy,
+ * allowing up to N messages to be sent in M seconds, where
+ * N (limit) and M (period) can both be configured.
+ */
 class       Erebot_Module_RateLimiter
 extends     Erebot_Module_Base
 implements  Erebot_Interface_RateLimiter
 {
+    /**
+     * \brief
+     *      A list of timestamp of messages recently sent to the IRC server.
+     *
+     * Each time this module allows a message to be sent,
+     * it keeps track of the time it did so.
+     * Up to "limit" (see configuration) timestamps are kept.
+     * Next time the bot tries to send a message, this module
+     * will look at how much messages have already been sent
+     * since the last "period" seconds and act accordingly.
+     */
     protected $_queue;
 
+    /// \copydoc Erebot_Module_Base::_reload()
     public function _reload($flags)
     {
         if ($this->_channel !== NULL)
@@ -32,10 +53,12 @@ implements  Erebot_Interface_RateLimiter
         }
     }
 
+    /// \copydoc Erebot_Module_Base::_unload()
     protected function _unload()
     {
     }
 
+    /// \copydoc Erebot_Interface_RateLimiter::canSend()
     public function canSend()
     {
         $time   = time();
