@@ -17,13 +17,13 @@
 */
 
 class   RateLimiterTest
-extends ErebotModuleTestCase
+extends Erebot_Testenv_Module_TestCase
 {
     public function setUp()
     {
+        $this->_module = new Erebot_Module_RateLimiter(NULL);
         parent::setUp();
 
-        $this->_module = new Erebot_Module_RateLimiter(NULL);
         $this->_module->reload(
             $this->_connection,
             Erebot_Module_Base::RELOAD_ALL |
