@@ -14,7 +14,10 @@ Contents:
 ..  toctree::
     :maxdepth: 2
 
+    Prerequisites
     generic/Installation
+    Configuration
+    Usage
 
 
 ..  _`Erebot`:
