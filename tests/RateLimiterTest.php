@@ -26,7 +26,7 @@ extends Erebot_Testenv_Module_TestCase
 
         $this->_module->reload(
             $this->_connection,
-            Erebot_Module_Base::RELOAD_ALL |
+            Erebot_Module_Base::RELOAD_MEMBERS |
             Erebot_Module_Base::RELOAD_INIT
         );
     }
