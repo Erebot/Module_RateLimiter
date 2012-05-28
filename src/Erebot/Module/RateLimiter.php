@@ -56,6 +56,11 @@ implements  Erebot_Interface_RateLimiter
      */
     public function _reload($flags)
     {
+        if ($flags & self::RELOAD_HANDLERS) {
+            $cls = $this->getFactory('!Callable');
+            $this->registerHelpMethod(new $cls(array($this, 'getHelp')));
+        }
+
         if ($this->_channel !== NULL)
             return;
 
@@ -67,6 +72,45 @@ implements  Erebot_Interface_RateLimiter
     /// \copydoc Erebot_Module_Base::_unload()
     protected function _unload()
     {
+    }
+
+    /**
+     * Provides help about this module.
+     *
+     * \param Erebot_Interface_Event_Base_TextMessage $event
+     *      Some help request.
+     *
+     * \param Erebot_Interface_TextWrapper $words
+     *      Parameters passed with the request. This is the same
+     *      as this module's name when help is requested on the
+     *      module itself (in opposition with help on a specific
+     *      command provided by the module).
+     */
+    public function getHelp(
+        Erebot_Interface_Event_Base_TextMessage $event,
+        Erebot_Interface_TextWrapper            $words
+    )
+    {
+        if ($event instanceof Erebot_Interface_Event_Base_Private) {
+            $target = $event->getSource();
+            $chan   = NULL;
+        }
+        else
+            $target = $chan = $event->getChan();
+
+        $fmt        = $this->getFormatter($chan);
+        $moduleName = strtolower(get_class());
+        $nbArgs     = count($words);
+
+        if ($nbArgs == 1 && $words[0] == $moduleName) {
+            $msg = $fmt->_(
+                "This module does not provide any command but is used ".
+                "by the bot to control the rate at which it sends messages ".
+                "to IRC servers (bandwidth throttling)."
+            );
+            $this->sendMessage($target, $msg);
+            return TRUE;
+        }
     }
 
     /// \copydoc Erebot_Interface_RateLimiter::canSend()
