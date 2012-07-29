@@ -1,31 +1,23 @@
+# SOME DESCRIPTIVE TITLE.
+# This file is put in the public domain.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: Erebot_Module_RateLimiter 0.5.0\n"
-"Report-Msgid-Bugs-To: i18n@erebot.net\n"
-"POT-Creation-Date: 2012-05-28 20:02+0200\n"
-"PO-Revision-Date: 2011-04-16 12:25+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: en_US\n"
+"Project-Id-Version: Erebot\n"
+"Report-Msgid-Bugs-To: https://github.com/Erebot/Erebot/issues\n"
+"POT-Creation-Date: 2012-05-28 20:05+0200\n"
+"PO-Revision-Date: 2012-05-28 18:09+0000\n"
+"Last-Translator: François Poirotte <clicky@erebot.net>\n"
+"Language-Team: English (United States) <i18n.en_US@erebot.net>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
 # File: src/Erebot/Module/RateLimiter.php, line: 107
 msgid ""
 "This module does not provide any command but is used by the bot to control "
 "the rate at which it sends messages to IRC servers (bandwidth throttling)."
-msgstr ""
-"This module does not provide any command but is used by the bot to control "
-"the rate at which it sends messages to IRC servers (bandwidth throttling)."
-#
-#
-#
-# File: src/Erebot/Module/RateLimiter.php, line: 107
-#~ msgid ""
-#~ "This module does not provide any command but is used by the bot to control "
-#~ "the rate at which it sends messages "
-#~ msgstr ""
-#~ "This module does not provide any command but is used by the bot to control "
-#~ "the rate at which it sends messages "
+msgstr "This module does not provide any command but is used by the bot to control the rate at which it sends messages to IRC servers (bandwidth throttling)."
