@@ -1,5 +1,5 @@
 {
-    "name": "erebot/erebot-module-ratelimiter",
+    "name": "erebot/ratelimiter-module",
     "description": "Erebot module to limit the rate at which the bot sends messages",
     "keywords": ["Erebot", "IRC", "bot", "module"],
     "homepage": "https://github.com/Erebot/Erebot_Module_RateLimiter",
