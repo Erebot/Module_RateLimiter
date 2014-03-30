@@ -21,19 +21,19 @@ extends Erebot_Testenv_Module_TestCase
 {
     public function setUp()
     {
-        $this->_module = new Erebot_Module_RateLimiter(NULL);
+        $this->_module = new \Erebot\Module\RateLimiter(NULL);
         parent::setUp();
 
-        $this->_module->reload(
+        $this->_module->reloadModule(
             $this->_connection,
-            Erebot_Module_Base::RELOAD_MEMBERS |
-            Erebot_Module_Base::RELOAD_INIT
+            \Erebot\Module\Base::RELOAD_MEMBERS |
+            \Erebot\Module\Base::RELOAD_INIT
         );
     }
 
     public function tearDown()
     {
-        $this->_module->unload();
+        $this->_module->unloadModule();
         parent::tearDown();
     }
 
@@ -66,7 +66,7 @@ extends Erebot_Testenv_Module_TestCase
     }
 
     /**
-     * @expectedException Erebot_InvalidValueException
+     * @expectedException \Erebot\InvalidValueException
      */
     public function testInvalidLimit()
     {
@@ -79,7 +79,7 @@ extends Erebot_Testenv_Module_TestCase
     }
 
     /**
-     * @expectedException Erebot_InvalidValueException
+     * @expectedException \Erebot\InvalidValueException
      */
     public function testInvalidPeriod()
     {
