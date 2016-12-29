@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2011-2016, Erebot
+# This file is distributed under the same license as the Erebot_Module_RateLimiter package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Erebot_Module_RateLimiter 1.0.x-dev\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-30 00:02+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+#
+# File: ../src/Configuration.rst, line: 10
+msgid "Configuration"
+msgstr "Configuration"
+#
+# File: ../src/Configuration.rst, line: 15
+msgid "Options"
+msgstr "Options"
+#
+# File: ../src/Configuration.rst, line: 17
+msgid "This module provides several configuration options."
+msgstr "This module provides several configuration options."
+#
+# File: ../src/Configuration.rst, line: 0
+msgid "Options for |project|"
+msgstr "Options for |project|"
+#
+# File: ../src/Configuration.rst, line: 22
+msgid "Name"
+msgstr "Name"
+#
+# File: ../src/Configuration.rst, line: 22
+msgid "Type"
+msgstr "Type"
+#
+# File: ../src/Configuration.rst, line: 22
+msgid "Default value"
+msgstr "Default value"
+#
+# File: ../src/Configuration.rst, line: 22
+msgid "Description"
+msgstr "Description"
+#
+# File: ../src/Configuration.rst, line: 25
+msgid "limit"
+msgstr "limit"
+#
+# File: ../src/Configuration.rst, line: 25
+# File: ../src/Configuration.rst, line: 30
+msgid "integer"
+msgstr "integer"
+#
+# File: ../src/Configuration.rst, line: 25
+# File: ../src/Configuration.rst, line: 30
+msgid "n/a"
+msgstr "n/a"
+#
+# File: ../src/Configuration.rst, line: 25
+msgid ""
+"How many messages may be sent to a connection during a period of time before "
+"the bot starts throttling the output rate."
+msgstr ""
+"How many messages may be sent to a connection during a period of time before "
+"the bot starts throttling the output rate."
+#
+# File: ../src/Configuration.rst, line: 30
+msgid "period"
+msgstr "period"
+#
+# File: ../src/Configuration.rst, line: 30
+msgid "Period of time (in seconds) which is used to control the output rate."
+msgstr "Period of time (in seconds) which is used to control the output rate."
+#
+# File: ../src/Configuration.rst, line: 37
+msgid "Example"
+msgstr "Example"
+#
+# File: ../src/Configuration.rst, line: 39
+msgid ""
+"In this example, we prevent the bot from sending out more than 4 messages "
+"every 2 seconds."
+msgstr ""
+"In this example, we prevent the bot from sending out more than 4 messages "
+"every 2 seconds."

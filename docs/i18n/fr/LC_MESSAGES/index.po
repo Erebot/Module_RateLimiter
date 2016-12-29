@@ -1,0 +1,38 @@
+# French translations for Erebot_Module_RateLimiter package.
+# Copyright (C) 2011-2016, Erebot
+# This file is distributed under the same license as the Erebot_Module_RateLimiter package.
+# Automatically generated, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Erebot_Module_RateLimiter 1.0.x-dev\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-30 00:02+0100\n"
+"PO-Revision-Date: 2016-12-30 00:02+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#
+msgid "Welcome to the documentation for Erebot_Module_RateLimiter!"
+msgstr ""
+#
+msgid ""
+"Erebot_Module_RateLimiter is a module for `Erebot`_ that can limit the bot's "
+"output rate so as to prevent it from flooding IRC servers."
+msgstr ""
+#
+msgid ""
+"The algorithm used is really basic and won't protect it against carefully "
+"planned attacks (:abbr:`DoS (Denial of Service)`), but it is still better "
+"than having nothing at all."
+msgstr ""
+#
+msgid "Contents:"
+msgstr ""
+#
+msgid "Current status on http://travis-ci.org/: |travis|"
+msgstr ""
